@@ -7,7 +7,7 @@
 body {
   font-family: "Poppins", Arial;
   color: #ccc;
-  background-color: #ccc;
+  background-color: #ddd;
 }
 #nav {
   transition: all 0.5s ease;
@@ -32,10 +32,6 @@ body {
   opacity: 1;
   text-decoration: none;
   transition: all 0.5s ease;
-}
-.navbar li a:hover {
-  font-size: 2rem;
-  color: #f0f0f0;
 }
 .navbar a:visited {
   color: #ccc;
@@ -105,21 +101,11 @@ h2 {
   margin-bottom: 1rem;
   border: 2px solid #1d1d1d;
 }
-.img img:hover {
-  box-shadow: 8px 8px 8px #969696, 12px 12px 14px #a1a1a1,
-    15px 15px 15px #afafaf;
-  z-index: 1;
-  transform: translateY(-20px);
-}
 .img a {
   padding: 3px;
   text-decoration: none;
   color: #003b6f;
   transition: all 0.5s ease;
-}
-.img a:hover {
-  color: #0059a8;
-  text-shadow: 3px 5px 5px #4d4d4d;
 }
 #about {
   height: 75vh;
@@ -168,11 +154,6 @@ footer a {
   font-size: 1.2em;
   transition: all 0.5s ease;
 }
-footer a:hover {
-  color: #fff;
-  font-size: 1.3em;
-  text-shadow: 5px 5px 10px #111;
-}
 .hideNav {
   transition: all 0.5s ease;
   opacity: 0;
@@ -191,6 +172,29 @@ footer a:hover {
     rgba(221, 221, 221, 0) 100%
   );
 }
+/*Only Allow Hover State on Larger screens*/
+@media (min-width: 1000px) {
+  footer a:hover {
+    color: #fff;
+    font-size: 1.3em;
+    text-shadow: 5px 5px 10px #111;
+  }
+  .img a:hover {
+    color: #0059a8;
+    text-shadow: 3px 5px 5px #4d4d4d;
+  }
+  .img img:hover {
+    box-shadow: 8px 8px 8px #969696, 12px 12px 14px #a1a1a1,
+      15px 15px 15px #afafaf;
+    z-index: 1;
+    transform: translateY(-20px);
+  }
+  .navbar li a:hover {
+    font-size: 2rem;
+    color: #f0f0f0;
+  }
+}
+
 @media (max-width: 850px) {
   .navbar {
     text-align: center;
@@ -219,11 +223,6 @@ footer a:hover {
   }
   .img img {
     width: 80%;
-  }
-  .img img:hover {
-    width: 80%;
-    transform: translateY(0px);
-    box-shadow: none;
   }
   .aboutClass h2 {
     font-size: 3rem;
@@ -274,11 +273,6 @@ footer a:hover {
     width: 100%;
     margin-bottom: 0;
   }
-  .img img:hover {
-    width: 100%;
-    box-shadow: none;
-    transform: translateY(0px);
-  }
   #about {
     height: 100%;
     background-attachment: scroll;
@@ -324,11 +318,6 @@ footer a:hover {
   }
   .img img {
     width: 300px;
-  }
-  .img img:hover {
-    width: 300px;
-    box-shadow: none;
-    transform: translateY(0px);
   }
   #about {
     height: 100%;
