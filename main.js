@@ -1,12 +1,12 @@
-const nav = document.getElementById('nav');
-const footer = document.getElementById('footer');
+const nav = document.getElementById("nav");
+const footer = document.getElementById("footer");
 let navTime;
 let footerTime;
 
 const TypeWriter = function(txtElement, words, wait = 2000) {
   this.txtElement = txtElement;
   this.words = words;
-  this.txt = '';
+  this.txt = "";
   this.wordIndex = 0;
   this.wait = parseInt(wait, 10);
   this.type();
@@ -14,10 +14,9 @@ const TypeWriter = function(txtElement, words, wait = 2000) {
 };
 
 function init() {
-  console.log('working');
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
 
   new TypeWriter(txtElement, words, wait);
 }
@@ -45,7 +44,7 @@ TypeWriter.prototype.type = function() {
   if (!this.isDeleting && this.txt === fullTxt) {
     typeSpeed = this.wait;
     this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
+  } else if (this.isDeleting && this.txt === "") {
     this.isDeleting = false;
     this.wordIndex++;
 
@@ -57,19 +56,19 @@ TypeWriter.prototype.type = function() {
 
 //Smooth Scroll Effect
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
     });
   });
 });
 
 //Make NavBar and Footer Disapper
-window.addEventListener('mousemove', () => {
-  nav.classList.remove('hideNav');
-  footer.classList.remove('hideNav');
+window.addEventListener("mousemove", () => {
+  nav.classList.remove("hideNav");
+  footer.classList.remove("hideNav");
 
   clearTimeout(navTime);
   clearTimeout(footerTime);
@@ -78,8 +77,8 @@ window.addEventListener('mousemove', () => {
 });
 
 function mouseTimeout() {
-  navTime = setTimeout(() => nav.classList.add('hideNav'), 1500);
-  footerTime = setTimeout(() => footer.classList.add('hideNav'), 1500);
+  navTime = setTimeout(() => nav.classList.add("hideNav"), 1500);
+  footerTime = setTimeout(() => footer.classList.add("hideNav"), 1500);
 }
 
 init();
