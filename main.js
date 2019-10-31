@@ -54,17 +54,6 @@ TypeWriter.prototype.type = function() {
   setTimeout(() => this.type(), typeSpeed);
 };
 
-//Smooth Scroll Effect
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
-  });
-});
-
 //Make NavBar and Footer Disapper
 window.addEventListener("mousemove", () => {
   nav.classList.remove("hideNav");
