@@ -33,9 +33,10 @@ body {
   color: #ccc;
   opacity: 1;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .navbar a:visited {
   color: #ccc;
@@ -172,9 +173,10 @@ footer a {
   text-decoration: none;
   color: #ccc;
   font-size: 1.2em;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .hideNav {
   -webkit-transition: all 0.5s ease;
@@ -214,10 +216,9 @@ footer a {
 }
 /*Only Allow Hover State on Larger screens*/
 @media (min-width: 1000px) {
-  footer a:hover {
+  .navbar li a:hover {
     color: #fff;
-    font-size: 1.3em;
-    text-shadow: 5px 5px 10px #111;
+    border-bottom: 2px solid #f0f0f0;
   }
   .img a:hover {
     color: #0059a8;
@@ -233,9 +234,9 @@ footer a {
     -ms-transform: translateY(-20px);
     transform: translateY(-20px);
   }
-  .navbar li a:hover {
-    font-size: 2rem;
-    color: #f0f0f0;
+  footer a:hover {
+    color: #fff;
+    border-bottom: 2px solid #f0f0f0;
   }
 }
 
@@ -377,11 +378,8 @@ footer a {
 }
 @media (min-width: 2000px) {
   .navbar li {
-    font-size: 2rem;
-    padding: 25px;
-  }
-  .navbar li a:hover {
     font-size: 2.3rem;
+    padding: 25px;
   }
   #name {
     font-size: 4.5rem;
@@ -398,12 +396,6 @@ footer a {
   .img img {
     width: 700px;
   }
-  .img img:hover {
-    width: 800px;
-  }
-  .img a:hover {
-    font-size: 2.3rem;
-  }
   .aboutClass h2 {
     font-size: 4rem;
   }
@@ -413,8 +405,5 @@ footer a {
   footer {
     font-size: 1.8em;
     padding-bottom: 50px;
-  }
-  footer a:hover {
-    font-size: 2rem;
   }
 }
